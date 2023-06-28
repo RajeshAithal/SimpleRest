@@ -1,10 +1,11 @@
 pipeline {
+	agent none
     stages {
         stage("build") {
-            agent any 
-            tools {
-                jdk "Java 17"
+            steps {
+                sh 'gradle clean build'
             }
+
 
         }
 
